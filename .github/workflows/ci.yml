@@ -15,6 +15,6 @@ jobs:
       - uses: olafurpg/setup-scala@v10
         with:
           java-version: adopt@1.11
-      - uses: olafurpg/setup-gpg@v2
+      - uses: olafurpg/setup-gpg@v3
       - name: sbt ci ${{ github.ref }}
         run: ./sbt ci
