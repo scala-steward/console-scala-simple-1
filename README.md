@@ -5,10 +5,10 @@ A simple Scala "Hello World!" application, buildable with sbt. Useful for testin
 
 # Building manually
 
-| Task  | Command       |
-| ----- | ------------- |
-| Build | `sbt compile` |
-| Run   | `sbt run`     |
+| Task  | Command         |
+| ----- | --------------- |
+| Build | `./sbt compile` |
+| Run   | `./sbt run`     |
 
 
 # App output

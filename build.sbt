@@ -37,7 +37,9 @@ lazy val commonSettings: List[Def.Setting[_]] = List(
     ),
   ),
   testFrameworks += new TestFramework("zio.test.sbt.ZTestFramework"),
-  mimaReportBinaryIssues := {},
-) ++ DecentScala.decentScalaSettings
+//  mimaReportBinaryIssues := {},
+//) ++ DecentScala.decentScalaSettings
+)
 
-addCommandAlias("ci", "; check; publishLocal")
+//addCommandAlias("ci", "; check; publishLocal")
+addCommandAlias("ci", "; publishLocal")
