@@ -10,4 +10,5 @@ jobs:
       - uses: hmarr/auto-approve-action@v2.1.0
         if: github.actor == 'scala-steward'
         with:
+          target: major
           github-token: ${{ secrets.GITHUB_TOKEN }}
