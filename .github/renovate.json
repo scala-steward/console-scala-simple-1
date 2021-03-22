@@ -1,2 +1,13 @@
 {
+  "packageRules": [
+    {
+      "matchManagers": [
+        "sbt"
+      ],
+      "enabled": false
+    },
+    {
+      "automerge": true
+    }
+  ]
 }
