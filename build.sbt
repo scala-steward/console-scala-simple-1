@@ -32,6 +32,7 @@ lazy val commonSettings: List[Def.Setting[_]] = DecentScala.decentScalaSettings 
       url("https://www.eclipse.org/che/"),
     ),
   ),
+  crossScalaVersions := List(DecentScala.decentScalaVersion213, DecentScala.decentScalaVersion212),
   testFrameworks += new TestFramework("zio.test.sbt.ZTestFramework"),
   mimaReportBinaryIssues := {},
 )
