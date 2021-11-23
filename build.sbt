@@ -1,17 +1,8 @@
-lazy val root = project
+lazy val consoleScalaSimple = project
   .in(file("."))
   .settings(commonSettings)
   .settings(
     name := "console-scala-simple",
-    publish / skip := true,
-  )
-  .aggregate(example)
-
-lazy val example = project
-  .in(file("example"))
-  .settings(commonSettings)
-  .settings(
-    name := "example",
     Compile / mainClass := Some("org.eclipse.che.examples.HelloWorld"),
     libraryDependencies ++= List(
       Dependencies.zio,
@@ -32,7 +23,7 @@ lazy val commonSettings: List[Def.Setting[_]] = DecentScala.decentScalaSettings 
       url("https://www.eclipse.org/che/"),
     ),
   ),
-  crossScalaVersions := List(DecentScala.decentScalaVersion213, DecentScala.decentScalaVersion212),
+  crossScalaVersions -= DecentScala.decentScalaVersion211,
   testFrameworks += new TestFramework("zio.test.sbt.ZTestFramework"),
   mimaReportBinaryIssues := {},
 )
